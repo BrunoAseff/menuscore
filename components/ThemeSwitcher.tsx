@@ -17,15 +17,15 @@ export default function ThemeSwitcher() {
 
   return (
     <Tabs defaultValue={theme}>
-      <TabsList className="border border-sky-600 ">
+      <TabsList className="  bg-foreground ">
         <TabsTrigger value="light" onClick={() => setTheme("light")}>
-          <SunIcon className="h-[1.2rem] w-[1.2rem]" />
+          <SunIcon className=" h-[1.2rem] w-[1.2rem] dark:mix-blend-difference	" />
         </TabsTrigger>
         <TabsTrigger value="dark" onClick={() => setTheme("dark")}>
-          <MoonIcon className="h-[1.2rem] w-[1.2rem] rotate-90 transition-all dark:rotate-0" />
+          <MoonIcon className="h-[1.2rem] w-[1.2rem] rotate-90 transition-all dark:rotate-0 dark:mix-blend-difference" />
         </TabsTrigger>
         <TabsTrigger value="system" onClick={() => setTheme("system")}>
-          <DesktopIcon className="h-[1.2rem] w-[1.2rem]" />
+          <DesktopIcon className="h-[1.2rem] w-[1.2rem] dark:mix-blend-difference" />
         </TabsTrigger>
       </TabsList>
     </Tabs>

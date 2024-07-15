@@ -1,12 +1,22 @@
 // RootLayout.tsx
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { mergedLocalization } from "../localizations";
-import { ClerkProvider, SignedIn, SignedOut } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
+import { Toaster } from "@/components/ui/toaster";
+import DesignerContextProvider from "@/components/context/DesignerContext";
+import NextTopLoader from "nextjs-toploader";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-inter",
+});
+
+const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Forms Creator",
@@ -22,18 +32,19 @@ export default function RootLayout({
     <ClerkProvider
       appearance={{
         variables: {
-          colorPrimary: "#008DDA",
-          colorText: "#222831",
-          colorBackground: "#f8f7ff",
-          colorInputBackground: "#f8f7ff",
+          colorPrimary: "#41C9E2",
+          colorBackground: "#222831",
+          colorInputBackground: "#222831",
         },
+        baseTheme: dark,
       }}
       localization={mergedLocalization}
     >
       <html lang="en">
-        <body>
-          <body className={inter.className}>
-            <main>
+        <body className={`${inter.variable} ${nunito.className} `}>
+          <main>
+            <NextTopLoader />
+            <DesignerContextProvider>
               <ThemeProvider
                 attribute="class"
                 defaultTheme="system"
@@ -41,9 +52,10 @@ export default function RootLayout({
                 disableTransitionOnChange
               >
                 {children}
-              </ThemeProvider>{" "}
-            </main>{" "}
-          </body>
+                <Toaster />
+              </ThemeProvider>
+            </DesignerContextProvider>
+          </main>{" "}
         </body>
       </html>
     </ClerkProvider>
