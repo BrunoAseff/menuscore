@@ -32,10 +32,10 @@ import { Slider } from "../ui/slider";
 const type: ElementsType = "TextAreaField";
 
 const extraAttributes = {
-  label: "Text area",
-  helperText: "Helper text",
+  label: "Campo de texto",
+  helperText: "Texto de ajuda",
   required: false,
-  placeHolder: "Value here...",
+  placeHolder: "Texto aqui...",
   rows: 3,
 };
 
@@ -270,7 +270,7 @@ function PropertiesComponent({
           name="rows"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Rows {form.watch("rows")}</FormLabel>
+              <FormLabel>Linhas: {form.watch("rows")}</FormLabel>
               <FormControl>
                 <Slider
                   defaultValue={[field.value]}

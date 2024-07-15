@@ -214,8 +214,8 @@ function PropertiesComponent({
     });
 
     toast({
-      title: "Success",
-      description: "Properties saved successfully",
+      title: "Successo",
+      description: "As propriedades foram salvas",
     });
 
     setSelectedElement(null);
@@ -290,7 +290,7 @@ function PropertiesComponent({
           render={({ field }) => (
             <FormItem>
               <div className="flex justify-between items-center">
-                <FormLabel>Options</FormLabel>
+                <FormLabel>Opções</FormLabel>
                 <Button
                   variant={"outline"}
                   className="gap-2"
@@ -300,7 +300,7 @@ function PropertiesComponent({
                   }}
                 >
                   <AiOutlinePlus />
-                  Add
+                  Adicionar
                 </Button>
               </div>
               <div className="flex flex-col gap-2">

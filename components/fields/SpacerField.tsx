@@ -126,7 +126,7 @@ function PropertiesComponent({
           name="height"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Height (px): {form.watch("height")}</FormLabel>
+              <FormLabel>Distância (px): {form.watch("height")}</FormLabel>
               <FormControl className="pt-2">
                 <Slider
                   defaultValue={[field.value]}

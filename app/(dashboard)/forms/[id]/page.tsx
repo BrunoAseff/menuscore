@@ -45,13 +45,13 @@ async function FormDetailPage({
 
   return (
     <>
-      <div className="py-10 border-b border-muted">
+      <div className="py-10 border-b border-border">
         <div className="flex justify-between container">
           <h1 className="text-4xl font-bold truncate">{form.name}</h1>
           <VisitBtn shareUrl={form.shareURL} />
         </div>
       </div>
-      <div className="py-4 border-b border-muted">
+      <div className="py-4 border-b border-border">
         <div className="container flex gap-2 items-center justify-between">
           <FormLinkShare shareUrl={form.shareURL} />
         </div>

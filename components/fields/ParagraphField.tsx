@@ -42,7 +42,7 @@ export const ParagprahFieldFormElement: FormElement = {
   }),
   designerBtnElement: {
     icon: BsTextParagraph,
-    label: "Campo de parágrafo",
+    label: "Parágrafo",
   },
   designerComponent: DesignerComponent,
   formComponent: FormComponent,
@@ -126,7 +126,7 @@ function PropertiesComponent({
           name="text"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Text</FormLabel>
+              <FormLabel>Texto</FormLabel>
               <FormControl>
                 <Textarea
                   rows={5}
