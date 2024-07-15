@@ -32,7 +32,7 @@ import { Slider } from "../ui/slider";
 const type: ElementsType = "TextAreaField";
 
 const extraAttributes = {
-  label: "Campo de texto",
+  label: "Área de texto",
   helperText: "Texto de ajuda",
   required: false,
   placeHolder: "Texto aqui...",
@@ -56,7 +56,7 @@ export const TextAreaFormElement: FormElement = {
   }),
   designerBtnElement: {
     icon: BsTextareaResize,
-    label: "TextArea Field",
+    label: "Área de texto",
   },
   designerComponent: DesignerComponent,
   formComponent: FormComponent,

@@ -31,8 +31,8 @@ import { Checkbox } from "../ui/checkbox";
 const type: ElementsType = "CheckboxField";
 
 const extraAttributes = {
-  label: "Checkbox field",
-  helperText: "Helper text",
+  label: "Caixa de seleção",
+  helperText: "Texto de ajuda",
   required: false,
 };
 
